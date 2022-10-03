@@ -8,7 +8,7 @@ import {
   Button,
   TouchableOpacity,
 } from "react-native";
-import CheckBox from "react-native-check-box";
+
 
 import BackButton from "../BackButton";
 import Box from "../Box";
@@ -19,38 +19,32 @@ const Login = () => {
     <View style={styles.parent}>
       <StatusBar backgroundColor="#FF7700" />
       <ScrollView>
-        <BackButton/>
+        <BackButton />
 
         <Text style={styles.header}>Create an account </Text>
         <View style={{ flexDirection: "column" }}>
           <Box placeholder="First Name" />
 
           <Box placeholder="Last Name" />
-
           <Box placeholder="Email" />
-
           <Box placeholder="Password" />
-
           <Box placeholder="Re-entered Password" />
-
           <Box placeholder="Zip Code" />
-
           <View style={{ flexDirection: "row" }}>
-            <View style={{ flex: 0.7 }}>
-             <CheckBox/>
-            </View>
+            <View style={{ flex: 0.7 }}></View>
             <View style={{ flex: 6 }}>
               <Text>Subscribe to Newsletter</Text>
             </View>
           </View>
           <View style={{ marginTop: 20 }}>
-            <Button  title="SINGUP" color="#FF7700" />
+            <Button title="SINGUP" color="#FF7700" />
           </View>
           <View style={{ alignSelf: "center" }}>
             <Text>
               By signing up you are agree to the terms and conditions.
             </Text>
           </View>
+   
         </View>
       </ScrollView>
     </View>
