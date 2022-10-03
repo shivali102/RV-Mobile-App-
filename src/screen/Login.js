@@ -10,8 +10,8 @@ import {
 } from "react-native";
 
 
-import BackButton from "../BackButton";
-import Box from "../Box";
+import BackButton from "../component/BackButton";
+import Box from "../component/Box";
 
 
 const Login = () => {

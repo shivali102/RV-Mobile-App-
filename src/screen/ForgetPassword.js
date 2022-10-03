@@ -1,14 +1,15 @@
 import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {View,Text,Image} from 'react-native'
+import {View,Text,Image,StyleSheet} from 'react-native'
+import color from '../theme/color'
 
 
 const ForgetPassword=()=>{
     return (
       <View>
-        <StatusBar backgroundColor="#FF7700" />
+        <StatusBar backgroundColor={color.orange}/>
         <View>
-          <Image source={require('/src/Images/forgottenPassword.png')} />
+          <Image source={require('../Images/forgottenPassword.png')} />
         </View>
       </View>
     );
