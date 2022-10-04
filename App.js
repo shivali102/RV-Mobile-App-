@@ -1,13 +1,13 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native'
-import Login from './src/screen/Login'
+import Signup from './src/screen/Signup'
 import ForgetPassword from './src/screen/ForgetPassword'; 
+import Login from './src/screen/Login';
 
 const App=()=> {
   return (
     <View>
-   <ForgetPassword/>
-    
+    <Login/>
     </View>
   );
 }

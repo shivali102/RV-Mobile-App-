@@ -1,5 +1,4 @@
-const color={
-    orange:'#FF7700'
-
-} 
+const color = {
+theme: "#0058AB",
+}; 
 export default color;

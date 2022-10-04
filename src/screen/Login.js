@@ -1,69 +1,57 @@
+
 import React from "react";
 import {
   Text,
   View,
   StyleSheet,
-  StatusBar,
+ Image,
   ScrollView,
   Button,
   TouchableOpacity,
 } from "react-native";
-
-
+import { StatusBar } from "expo-status-bar";
 import BackButton from "../component/BackButton";
-import Box from "../component/Box";
 
 
-const Login = () => {
-  return (
-    <View style={styles.parent}>
-      <StatusBar backgroundColor="#FF7700" />
-      <ScrollView>
+const Login=()=>{
+    return (
+      <View>
+        <StatusBar backgroundColor="#0058AB" />
         <BackButton />
-
-        <Text style={styles.header}>Create an account </Text>
-        <View style={{ flexDirection: "column" }}>
-          <Box placeholder="First Name" />
-
-          <Box placeholder="Last Name" />
-          <Box placeholder="Email" />
-          <Box placeholder="Password" />
-          <Box placeholder="Re-entered Password" />
-          <Box placeholder="Zip Code" />
-          <View style={{ flexDirection: "row" }}>
-            <View style={{ flex: 0.7 }}></View>
-            <View style={{ flex: 6 }}>
-              <Text>Subscribe to Newsletter</Text>
-            </View>
-          </View>
-          <View style={{ marginTop: 20 }}>
-            <Button title="SINGUP" color="#FF7700" />
-          </View>
-          <View style={{ alignSelf: "center" }}>
-            <Text>
-              By signing up you are agree to the terms and conditions.
-            </Text>
-          </View>
-   
+        <View>
+          <Image
+            style={styles.image}
+            source={require("../Images/Checkemail.png")}
+          />
         </View>
-      </ScrollView>
-    </View>
-  );
+        <View style={{ alignItems: "center" }}>
+          <Text style={styles.text1}>Check your email</Text>
+        </View>
+        <View style={{alignItems:'center'}}>
+            <Text style={styles.text2}>We have sent a Password recovery instruction to your email</Text>
+        </View>
+      </View>
+    );
 };
-
 const styles = StyleSheet.create({
-  parent: {
-    marginHorizontal: 30,
+  image: {
+    width: 267,
+    height: 272,
+    marginTop: 60,
+    marginHorizontal: 50,
+
+    resizeMode: "contain",
   },
-  header: {
-    color: "#FF7700",
+  text1: {
+    color: "#0058AB",
     fontSize: 20,
     marginTop: 30,
     fontWeight: "bold",
-    paddingBottom: 20,
+    marginBottom:8,
+   
   },
-  boxView: {
-    paddingVertical: 10,
-  },
+  text2:{
+    marginHorizontal:50
+  }
 });
-export default Login;
+export default  Login;
