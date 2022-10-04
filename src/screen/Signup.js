@@ -9,11 +9,8 @@ import {
   TouchableOpacity,
 } from "react-native";
 
-
 import BackButton from "../component/BackButton";
 import Box from "../component/Box";
-
-
 
 const Signup = () => {
   return (
