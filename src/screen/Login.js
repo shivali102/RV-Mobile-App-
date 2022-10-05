@@ -1,57 +1,40 @@
-
-import React from "react";
-import {
-  Text,
-  View,
-  StyleSheet,
- Image,
-  ScrollView,
-  Button,
-  TouchableOpacity,
-} from "react-native";
-import { StatusBar } from "expo-status-bar";
-import BackButton from "../component/BackButton";
-
-
-const Login=()=>{
-    return (
-      <View>
-        <StatusBar backgroundColor="#0058AB" />
-        <BackButton />
+import { StatusBar } from 'expo-status-bar';
+import react from 'react'
+import {View,Text, TouchableOpacity,StyleSheet, ScrollView} from 'react-native'
+const Login=()=>
+{   return(
+    <View>
+        <StatusBar backgroundColor='#0058AB'/>
+        <ScrollView>
+            <View style={{flexDirection:'row',justifyContent:'space-evenly'}}>
         <View>
-          <Image
-            style={styles.image}
-            source={require("../Images/Checkemail.png")}
-          />
-        </View>
-        <View style={{ alignItems: "center" }}>
-          <Text style={styles.text1}>Check your email</Text>
-        </View>
-        <View style={{alignItems:'center'}}>
-            <Text style={styles.text2}>We have sent a Password recovery instruction to your email</Text>
-        </View>
-      </View>
-    );
-};
-const styles = StyleSheet.create({
-  image: {
-    width: 267,
-    height: 272,
-    marginTop: 60,
-    marginHorizontal: 50,
+            <TouchableOpacity style={styles.button1}>
+                <Text>user</Text>
+            </TouchableOpacity>
 
-    resizeMode: "contain",
-  },
-  text1: {
-    color: "#0058AB",
-    fontSize: 20,
-    marginTop: 30,
-    fontWeight: "bold",
-    marginBottom:8,
-   
-  },
-  text2:{
-    marginHorizontal:50
-  }
-});
-export default  Login;
+        </View>
+        <View>
+            <TouchableOpacity style={styles.button1}>
+                <Text>user</Text>
+            </TouchableOpacity>
+
+        </View>
+
+        
+        </View>
+        </ScrollView>
+    </View>
+);
+}
+const styles =StyleSheet.create({
+
+    button1:{
+        marginTop:30,
+        borderWidth:1,
+        width:90
+
+    }
+ 
+}
+);
+export default Login;
