@@ -5,11 +5,14 @@ import ForgetPassword from './src/screen/ForgetPassword';
 import Checkemail from './src/screen/CheckeMail';
 import Login from './src/screen/Login';
 
+
 const App=()=> {
   return (
     <View>
  {/* <Checkemail/> */}
- {/* <ForgetPassword/> */}
+  {/*<ForgetPassword/>*/}
+ 
+ {/*<Signup/>*/}
  <Login/>
     </View>
   );
