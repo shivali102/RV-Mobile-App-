@@ -12,8 +12,8 @@ const App=()=> {
  {/* <Checkemail/> */}
   {/*<ForgetPassword/>*/}
  
- {/*<Signup/>*/}
- <Login/>
+ <Signup/>
+ {/*<Login/>*/}
     </View>
   );
 }
