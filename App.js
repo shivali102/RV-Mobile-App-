@@ -5,7 +5,7 @@ import ForgetPassword from './src/screen/ForgetPassword';
 import Checkemail from './src/screen/CheckeMail';
 import Login from './src/screen/Login';
 import useFonts from './src/api/useFonts';
-
+import Home from "./src/screen/Home";
 
 
 export default function App () {
@@ -17,7 +17,8 @@ export default function App () {
  {/* <Checkemail/> */}
   {/*<ForgetPassword/>*/}
  
- <Signup/>
+ {/*<Signup/>*/}
+ <Home/>
  {/*<Login/>*/}
     </View>
   );
