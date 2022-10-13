@@ -1,23 +1,17 @@
-import { View, Text, Image, ImageBackground, TouchableOpacity } from 'react-native'
+import { View, Text, Image, ImageBackground, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
 import Searchbox from './Searchbox';
 import { Foundation } from "@expo/vector-icons";
 
-const RvCard=()=> {
+const RvCard=(props)=> {
   return (
     <View
-      style={{
-        borderWidth: 1,
-        width: "40%",
-
-        borderRadius: 10,
-        borderColor: "grey",
-      }}
+      style={styles.parent}
     >
       <View style={{}}>
         <ImageBackground
           style={{ height: 100, width: "100%" }}
-          source={require("../Images/demopic.png")}
+          source={props.imageSrc}
         >
           <View
             style={{
@@ -65,13 +59,26 @@ const RvCard=()=> {
         }}
       >
         <View style={{ flex: 5 }}>
-          <Text>Drifter</Text>
+          <Text>{props.text}</Text>
         </View>
         <View style={{}}>
-          <Text>$17,500</Text>
+          <Text>{props.amount}</Text>
         </View>
       </View>
     </View>
   );
 };
+const styles=StyleSheet.create({
+  parent:{
+    
+        borderWidth: 1,
+        width: "45%",
+        borderRadius: 10,
+        borderColor: "grey",
+      
+      },
+
+
+
+})
 export default RvCard;

@@ -10,6 +10,7 @@ import Statusbar from "../component/Statusbar";
 
 
 
+const image1=require("../Images/demopic.png")
 const Home=()=>{
     return (
       <View>
@@ -18,14 +19,58 @@ const Home=()=>{
           <Header />
           <Homebackground />
           <View>
-            <RvCard />
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                marginHorizontal: 20,
+              }}
+            >
+              <RvCard imgSrc={image1} text="Drifter" amount="$17500" />
+              <RvCard
+                imgSrc={require("../Images/RVDC.png")}
+                text="Rifter"
+                amount="$15,500"
+              />
+            </View>
+            <View
+              style={{
+                flexDirection: "row",
+                justifyContent: "space-between",
+                marginHorizontal: 20,
+                paddingVertical:10,
+                
+              }}
+            >
+              <RvCard
+                imgSrc={require("../Images/rvcardpic.png")}
+                text="Drifter"
+                amount="$17500"
+              />
+              <RvCard
+                imgSrc={require("../Images/rvcardpic.png")}
+                text="Drifter"
+                amount="$17500"
+              />
+            </View>
           </View>
-          <View style={{alignItems:'center'}}>
-          <View style={{backgroundColor: "#0058AB" ,width:140,borderRadius:5,marginTop:10}}>
-            <TouchableOpacity style={{alignItems:'center'}}>
-              <Text style={{color:"white",padding:10,paddingHorizontal:0}}>SEE MORE</Text>
-            </TouchableOpacity>
-          </View>
+          <View style={{ alignItems: "center" }}>
+            <View
+              style={{
+                backgroundColor: "#0058AB",
+                width: 140,
+                borderRadius: 5,
+                marginTop: 10,
+              }}
+            >
+              <TouchableOpacity style={{ alignItems: "center" }}>
+                <Text
+                  style={{ color: "white", padding: 10, paddingHorizontal: 0 }}
+                >
+                  SEE MORE
+                </Text>
+              </TouchableOpacity>
+            </View>
           </View>
         </ScrollView>
       </View>
