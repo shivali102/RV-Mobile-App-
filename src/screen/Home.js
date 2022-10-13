@@ -1,12 +1,15 @@
 import { StatusBar } from "expo-status-bar";
 import React from "react";
-import {View,Text, ScrollView, TouchableOpacity} from "react-native"
+import {View,Text, ScrollView, TouchableOpacity,Image} from "react-native"
 import color from "../theme/color";
 import Header from "../component/Header";
 import Homebackground from "../component/Homebackground";
 import RV from "../component/RvCard"
 import RvCard from "../component/RvCard";
 import Statusbar from "../component/Statusbar";
+import InfoCard from "../component/InfoCard";
+import SellRv from "../component/SellRv";
+import Testimonial from "../component/Testimonial";
 
 
 
@@ -38,8 +41,7 @@ const Home=()=>{
                 flexDirection: "row",
                 justifyContent: "space-between",
                 marginHorizontal: 20,
-                paddingVertical:10,
-                
+                paddingVertical: 10,
               }}
             >
               <RvCard
@@ -54,6 +56,7 @@ const Home=()=>{
               />
             </View>
           </View>
+
           <View style={{ alignItems: "center" }}>
             <View
               style={{
@@ -72,6 +75,37 @@ const Home=()=>{
               </TouchableOpacity>
             </View>
           </View>
+
+          <View style={{flexDirection:'row',flexWrap:'wrap'}}>
+            <InfoCard
+              imgSrc={require("../Images/infocard1.png")}
+              number="5000+"
+              text="Client Benchmarks"
+            />
+
+            <InfoCard
+              imgSrc={require("../Images/rvcard2.png")}
+              number="10+ million $"
+              text="Deals Values"
+            />
+
+            
+              <InfoCard
+                imgSrc={require("../Images/rvcard3.png")}
+                number="20+ Years"
+                text="Cumulative experience"
+              />
+
+              <InfoCard
+                imgSrc={require("../Images/rvcard4.png")}
+                number="100+"
+                text="Best dealer"
+              />
+            </View>
+         
+
+          <SellRv />
+          <Testimonial />
         </ScrollView>
       </View>
     );
