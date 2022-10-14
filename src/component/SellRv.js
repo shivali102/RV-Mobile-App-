@@ -8,7 +8,7 @@ const SellRv=()=>{
         style={{
           marginTop: 20,
           paddingHorizontal: 10,
-          height: "40%",
+          height: "15%",
           backgroundColor: "#e6e6fa",
         }}
       >

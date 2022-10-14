@@ -9,11 +9,13 @@ import RvCard from "../component/RvCard";
 import Statusbar from "../component/Statusbar";
 import InfoCard from "../component/InfoCard";
 import SellRv from "../component/SellRv";
-import Testimonial from "../component/Testimonial";
+import Testimonial from "../component/Testimonial"
 
 
 
-const image1=require("../Images/demopic.png")
+
+
+
 const Home=()=>{
     return (
       <View>
@@ -29,11 +31,12 @@ const Home=()=>{
                 marginHorizontal: 20,
               }}
             >
-              <RvCard imgSrc={image1} text="Drifter" amount="$17500" />
+              <RvCard scrImage={require("../Images/rvcardpic.png")} title="Drifter" amount="$17500" />
               <RvCard
-                imgSrc={require("../Images/RVDC.png")}
-                text="Rifter"
+            
+                title="Rifter"
                 amount="$15,500"
+                scrImage={require("../Images/rvcardpic.png")}
               />
             </View>
             <View
@@ -45,13 +48,13 @@ const Home=()=>{
               }}
             >
               <RvCard
-                imgSrc={require("../Images/rvcardpic.png")}
-                text="Drifter"
+                scrImage={require("../Images/rvcardpic.png")}
+                title="Drifter"
                 amount="$17500"
               />
               <RvCard
-                imgSrc={require("../Images/rvcardpic.png")}
-                text="Drifter"
+                scrImage={require("../Images/rvcardpic.png")}
+                title="Drifter"
                 amount="$17500"
               />
             </View>
@@ -76,7 +79,7 @@ const Home=()=>{
             </View>
           </View>
 
-          <View style={{flexDirection:'row',flexWrap:'wrap'}}>
+          <View style={{ flexDirection: "row", flexWrap: "wrap",paddingHorizontal:10 }}>
             <InfoCard
               imgSrc={require("../Images/infocard1.png")}
               number="5000+"
@@ -89,20 +92,18 @@ const Home=()=>{
               text="Deals Values"
             />
 
-            
-              <InfoCard
-                imgSrc={require("../Images/rvcard3.png")}
-                number="20+ Years"
-                text="Cumulative experience"
-              />
+            <InfoCard
+              imgSrc={require("../Images/rvcard3.png")}
+              number="20+ Years"
+              text="Cumulative experience"
+            />
 
-              <InfoCard
-                imgSrc={require("../Images/rvcard4.png")}
-                number="100+"
-                text="Best dealer"
-              />
-            </View>
-         
+            <InfoCard
+              imgSrc={require("../Images/rvcard4.png")}
+              number="100+"
+              text="Best dealer"
+            />
+          </View>
 
           <SellRv />
           <Testimonial />

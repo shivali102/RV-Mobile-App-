@@ -6,6 +6,7 @@ import Checkemail from './src/screen/CheckeMail';
 import Login from './src/screen/Login';
 import useFonts from './src/api/useFonts';
 import Home from "./src/screen/Home";
+import Location from './src/screen/Location';
 
 
 export default function App () {
@@ -18,8 +19,9 @@ export default function App () {
   {/*<ForgetPassword/>*/}
  
  {/*<Signup/>*/}
- <Home/>
+ {/*<Home/>*/}
  {/*<Login/>*/}
+ <Location/>
     </View>
   );
 }

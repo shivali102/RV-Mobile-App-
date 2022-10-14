@@ -18,7 +18,7 @@ const Homebg=()=>{
               <Text style={styles.childtext2}>TO MOVE.</Text>
             </View>
             <View style={{ position: "absolute", right: 0}}>
-              <View>
+              <View style={{}}>
                 <Text style={styles.makes}>Makes</Text>
               </View>
               <View>
@@ -72,15 +72,16 @@ const styles=StyleSheet.create({
     },
     types:{
         backgroundColor:'white',
-        height:60,
+        height:70,
         width:80,
         padding:10,
     },
     makes:{
         backgroundColor:'#FF7700',
-       height:60,
+       height:70,
        width:80,
        padding:10,
+       
 
     },
     text2:{
