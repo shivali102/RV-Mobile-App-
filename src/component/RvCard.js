@@ -73,8 +73,11 @@ export default function RvCard({ title, amount, scrImage }) {
 const styles = StyleSheet.create({
   parent: {
     borderWidth: 1,
-    width: "45%",
+    width: "47%",
     borderRadius: 10,
     borderColor: "grey",
+    marginLeft:5,
+    marginRight:5,
+    marginBottom:20,
   },
 });

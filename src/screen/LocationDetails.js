@@ -1,8 +1,9 @@
-import { View, StatusBar,Image,StyleSheet, ScrollView} from 'react-native'
+import { View, StatusBar,Image,StyleSheet, ScrollView,Text} from 'react-native'
 import React from 'react'
 import Header from '../component/Header'
 import RvContact from '../component/RvContact';
-
+import color from '../theme/color';
+import RvCard from '../component/RvCard';
 
 export default function LocationDetails() {
   return (
@@ -16,7 +17,38 @@ export default function LocationDetails() {
             source={require("../Images/Deatailcardpic.png")}
           />
         </View>
-        <RvContact/>
+        <RvContact />
+        <View style={styles.TextView}>
+          <Text style={styles.text}>180 RV'S</Text>
+        </View>
+        <View
+          style={{
+            flexDirection: "row",
+            flexWrap: "wrap",
+            marginHorizontal: 10,
+          }}
+        >
+          <RvCard
+            title="Rifter"
+            amount="$15,500"
+            scrImage={require("../Images/rvcardpic.png")}
+          />
+          <RvCard
+            title="Rifter"
+            amount="$15,500"
+            scrImage={require("../Images/rvcardpic.png")}
+          />
+          <RvCard
+            title="Rifter"
+            amount="$15,500"
+            scrImage={require("../Images/rvcardpic.png")}
+          />
+          <RvCard
+            title="Rifter"
+            amount="$15,500"
+            scrImage={require("../Images/rvcardpic.png")}
+          />
+        </View>
       </ScrollView>
     </View>
   );
@@ -26,4 +58,13 @@ const styles = StyleSheet.create({
     width: 395,
     height: 195,
   },
+  text:{
+    fontWeight:"bold",
+    color:color.blue,
+    fontSize:15,
+  },
+  TextView:{
+   alignSelf:'center',
+   marginVertical:20,
+  }
 });
