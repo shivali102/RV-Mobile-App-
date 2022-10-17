@@ -3,49 +3,33 @@ import React from 'react'
 import color from '../theme/color';
 
 export default function DetailCard() {
-  return (
-    <View>
-      <View style={{ borderWidth: 1, width: 127, height: 100 }}>
-        <Image
-          style={styles.image}
-          source={require("../Images/Deatailcardpic.png")}
-        />
-      </View>
-      <View>
-        <Text style={styles.name}>Harvey RVs</Text>
-      </View>
-      <View>
-        <Text style={styles.description}>genburn ,ME</Text>
-      </View>
-
-      <View style={{flowDirection:'row',justifyContent:"space-between"}}>
-        <View style={{flex:6}}>
-          <Text style={{fontSize:6}}>180 Listenings</Text>
-        </View>
-        <View style={{flex:8}}>
-          <Text style={{fontSize:7}}>100KM</Text>
-        </View>
-       
-      </View>
+  return ( 
+    <View style={{height:170,width:'43%',borderWidth:1,borderRadius:5,backgroundColor:'white',margin:10}}>
+      <View style={{marginHorizontal:10}}>
+     <View>
+     <Image style={{height:87,width:127,justifyContent:'center',alignSelf:'center',marginTop:10}} source={require("../Images/Deatailcardpic.png")}/>
+     </View>
+     <View style={{paddingBottom:4}}>
+      <Text style={{fontWeight:'bold',color:color.blue,paddingTop:3}}>Harveys RVs</Text>
+     </View>
+     <View>
+      <Text style={{fontSize:10}}>Glenburn,ME 00441</Text>
+     </View>
+     <View style={{flexDirection:'row',justifyContent:'space-between',paddingVertical:4}}>
+     <View>
+      <Text style={{fontSize:10}}>180 Listing</Text>
+     </View>
+     <View>
+      <Text style={{fontSize:10,fontWeight:'bold'}}>100KM</Text>
+     </View>
+     </View>
+     </View>
     </View>
+
   );
+  
 }
 const styles=StyleSheet.create({
- image:{
-  resizeMode:'center',
-  Height:"20%",
-  width:"100%",
-
-
- },
- name:{
-  fontSize:15,
-  fontWeight:'bold',
-  color:color.blue,
- },
- description:{
-  color:"grey",
- }
-
+ 
 
 })

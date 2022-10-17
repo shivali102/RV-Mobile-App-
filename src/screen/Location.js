@@ -16,9 +16,18 @@ export default function Location() {
         <Searchbox/>
        
         <Text style={styles.text}>DEALERS</Text>
+        <View style={{flexDirection:'row',flexWrap:'wrap',marginHorizontal:10}}>
        <DetailCard/>
+       <DetailCard/>
+       <DetailCard/>
+       <DetailCard/>
+       <DetailCard/>
+       <DetailCard/>
+
+       </View>
       </ScrollView>
-    </View>
+      </View>
+      
   );
 }
 const styles=StyleSheet.create({

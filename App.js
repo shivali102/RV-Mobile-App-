@@ -7,6 +7,7 @@ import Login from './src/screen/Login';
 import useFonts from './src/api/useFonts';
 import Home from "./src/screen/Home";
 import Location from './src/screen/Location';
+import LocationDetails from './src/screen/LocationDetails';
 
 
 export default function App () {
@@ -21,7 +22,8 @@ export default function App () {
  {/*<Signup/>*/}
  {/*<Home/>*/}
  {/*<Login/>*/}
- <Location/>
+ {/*<Location/>*/}
+ <LocationDetails/>
     </View>
   );
 }
