@@ -21,8 +21,9 @@ export default function App () {
  
  {/*<Signup/>*/}
  {/*<Home/>*/}
+
  {/*<Login/>*/}
- {/*<Location/>*/}
+{/*<Location/>*/}
  <LocationDetails/>
     </View>
   );

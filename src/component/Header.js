@@ -25,15 +25,14 @@ const styles=StyleSheet.create({
         justifyContent:'space-between',
         marginHorizontal:20,
         alignItems:'center',
-        marginTop:30,
+        marginTop:10,
         height:50
        
         
     },
     image:{
-        width:80,
-        height:50,
-        resizeMode:"contain"
+        width:83,
+        height:40,
     },
 
     
