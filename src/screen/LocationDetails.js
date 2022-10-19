@@ -1,4 +1,4 @@
-import { View, StatusBar,Image,StyleSheet, ScrollView,Text} from 'react-native'
+import { View, StatusBar,Image,StyleSheet, ScrollView,Text,TouchableOpacity} from 'react-native'
 import React from 'react'
 import Header from '../component/Header'
 import RvContact from '../component/RvContact';
@@ -49,6 +49,19 @@ export default function LocationDetails() {
             scrImage={require("../Images/rvcardpic.png")}
           />
         </View>
+        <View style={{ alignItems: "center" }}>
+          <View
+            style={styles.button}
+          >
+            <TouchableOpacity style={{ alignItems: "center" }}>
+              <Text
+                style={styles.ButtonText}
+              >
+                SEE MORE
+              </Text>
+            </TouchableOpacity>
+          </View>
+        </View>
       </ScrollView>
     </View>
   );
@@ -58,13 +71,24 @@ const styles = StyleSheet.create({
     width: 395,
     height: 195,
   },
-  text:{
-    fontWeight:"bold",
-    color:color.blue,
-    fontSize:15,
+  text: {
+    fontWeight: "bold",
+    color: color.blue,
+    fontSize: 15,
   },
-  TextView:{
-   alignSelf:'center',
-   marginVertical:20,
-  }
+  TextView: {
+    alignSelf: "center",
+    marginVertical: 20,
+  },
+  button: {
+    backgroundColor: "#0058AB",
+    width: 140,
+    borderRadius: 5,
+    marginTop: 10,
+  },
+  ButtonText: {
+    color: "white",
+    padding: 10,
+    paddingHorizontal: 0,
+  },
 });

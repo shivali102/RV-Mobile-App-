@@ -1,4 +1,4 @@
-import { View, Text, ScrollView,StatusBar,StyleSheet } from 'react-native'
+import { View, Text, ScrollView,StyleSheet,StatusBar } from 'react-native'
 import React from 'react'
 import Header from '../component/Header';
 import { SearchBar } from 'react-native-screens';
@@ -10,7 +10,7 @@ import DetailCard from '../component/DetailCard';
 export default function Location() {
   return (
     <View style={styles.parent}>
-      <StatusBar backgroundColor="#0058AB" style="light" />
+      <StatusBar backgroundColor={color.blue} style="light" />
       <ScrollView>
         <Header/>
         <Searchbox/>

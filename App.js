@@ -8,6 +8,7 @@ import useFonts from './src/api/useFonts';
 import Home from "./src/screen/Home";
 import Location from './src/screen/Location';
 import LocationDetails from './src/screen/LocationDetails';
+import RvDetailpage from './src/screen/RvDetailpage';
 
 
 export default function App () {
@@ -16,15 +17,14 @@ export default function App () {
   }, []);
   return (
     <View>
- {/* <Checkemail/> */}
-  {/*<ForgetPassword/>*/}
- 
- {/*<Signup/>*/}
- {/*<Home/>*/}
-
- {/*<Login/>*/}
-{/*<Location/>*/}
- <LocationDetails/>
+      {/* <Checkemail/> */}
+      {/*<ForgetPassword/>*/}
+      {/* <Signup/> */}
+      {/* <Home/> */}
+      {/* <Login/> */}
+      {/* <Location/> */}
+      {/* <LocationDetails/>  */}
+      <RvDetailpage/>
     </View>
   );
 }

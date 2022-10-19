@@ -1,12 +1,11 @@
-import { StatusBar } from "expo-status-bar";
 import React from "react";
-import {View,Text, ScrollView, TouchableOpacity,Image} from "react-native"
+import {View,Text, ScrollView, TouchableOpacity,Image,StatusBar} from "react-native"
 import color from "../theme/color";
 import Header from "../component/Header";
 import Homebackground from "../component/Homebackground";
 import RV from "../component/RvCard"
 import RvCard from "../component/RvCard";
-import Statusbar from "../component/Statusbar";
+
 import InfoCard from "../component/InfoCard";
 import SellRv from "../component/SellRv";
 import Testimonial from "../component/Testimonial"
@@ -19,7 +18,7 @@ import Testimonial from "../component/Testimonial"
 const Home=()=>{
     return (
       <View>
-        <StatusBar backgroundColor="#0058AB" style="light" />
+        <StatusBar backgroundColor={color.blue} style="light" />
         <ScrollView>
           <Header />
           <Homebackground />

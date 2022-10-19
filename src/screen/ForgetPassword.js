@@ -1,6 +1,5 @@
-import { StatusBar } from 'expo-status-bar';
 import React from 'react';
-import {View,Text,Image,StyleSheet, ScrollView, TouchableOpacity} from 'react-native'
+import {View,Text,Image,StyleSheet, ScrollView, TouchableOpacity,StatusBar} from 'react-native'
 import color from '../theme/color'
 import Email from '../component/Email'
 import BackButton from '../component/BackButton'
@@ -9,7 +8,7 @@ import BackButton from '../component/BackButton'
 const ForgetPassword=()=>{
     return (
       <View style={styles.header}>
-        <StatusBar backgroundColor={color.orange} />
+        <StatusBar backgroundColor={color.blue} style="light" />
         <ScrollView>
           <View style={{ paddingLeft: 30 }}>
             <BackButton />

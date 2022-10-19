@@ -1,15 +1,16 @@
-import { StatusBar } from 'expo-status-bar';
+
 import react from 'react'
-import {View,Text, TouchableOpacity,StyleSheet, ScrollView,TextInput} from 'react-native'
+import {View,Text, TouchableOpacity,StyleSheet, ScrollView,TextInput,StatusBar} from 'react-native'
 import Email from '../component/Email';
 import { FontAwesome } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
+import color from '../theme/color';
 
 
 const Login=()=>
 {   return (
   <View>
-    <StatusBar backgroundColor="#0058AB" />
+    <StatusBar backgroundColor={color.blue} style="light" />
     <ScrollView>
       <View
         style={{
@@ -49,32 +50,21 @@ const Login=()=>
         <Text style={styles.subheader}>Log in to account</Text>
         <View style={styles.TextBox}>
           <View style={styles.icon}>
-            <FontAwesome
-           
-              name="envelope"
-              size={15}
-              color="grey"
-            />
+            <FontAwesome name="envelope" size={15} color="grey" />
           </View>
-          <View style={{ flex: 6 ,justifyContent:'center'}}>
+          <View style={{ flex: 6, justifyContent: "center" }}>
             <TextInput style={styles.Text} placeholder="Email" />
           </View>
         </View>
         <View style={styles.TextBox}>
           <View style={styles.icon}>
-            <Entypo
-           
-              name="lock"
-              size={15}
-              color="grey"
-            />
+            <Entypo name="lock" size={15} color="grey" />
           </View>
-          <View style={{ flex: 6,justifyContent:"center" }}>
+          <View style={{ flex: 6, justifyContent: "center" }}>
             <TextInput style={styles.Text} placeholder="Password" />
           </View>
         </View>
         <View style={{ flexDirection: "row" }}>
-         
           <View style={{ paddingTop: 20 }}>
             <Text style={{ color: "grey" }}>Forgot Password?</Text>
           </View>

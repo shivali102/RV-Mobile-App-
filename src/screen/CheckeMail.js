@@ -8,19 +8,19 @@ import {
   ScrollView,
   Button,
   TouchableOpacity,
+  StatusBar,
 } from "react-native";
-import { StatusBar } from "expo-status-bar";
+
 import BackButton from "../component/BackButton";
+import color from "../theme/color";
 
 
 const Checkemail=()=>{
     return (
       <View>
-        <StatusBar backgroundColor="#0058AB" />
-        <View style={{paddingLeft:30}}>
-
-      
-        <BackButton />
+        <StatusBar backgroundColor={color.blue} style="light" />
+        <View style={{ paddingLeft: 30 }}>
+          <BackButton />
         </View>
         <View>
           <Image
@@ -31,12 +31,14 @@ const Checkemail=()=>{
         <View style={{ alignItems: "center" }}>
           <Text style={styles.text1}>Check your email</Text>
         </View>
-        <View style={{alignSelf:'center',width:250}}>
-            <Text style={styles.text2}>We have sent a Password recovery instruction to your email</Text>
+        <View style={{ alignSelf: "center", width: 250 }}>
+          <Text style={styles.text2}>
+            We have sent a Password recovery instruction to your email
+          </Text>
         </View>
         <View style={styles.button}>
           <TouchableOpacity>
-           <Text style={{color:'white'}}>OKAY</Text> 
+            <Text style={{ color: "white" }}>OKAY</Text>
           </TouchableOpacity>
         </View>
       </View>

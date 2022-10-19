@@ -7,15 +7,17 @@ import {
   ScrollView,
   Button,
   TouchableOpacity,
+
 } from "react-native";
 import CustomCheckbox from "../component/CustomCheckbox";
 import BackButton from "../component/BackButton";
 import Box from "../component/Box";
+import color from "../theme/color";
 export default function Signup () {
   const [isChecked,setIsChecked] = useState(false)
   return (
     <View style={styles.parent}>
-      <StatusBar backgroundColor="#0058AB" />
+    <StatusBar backgroundColor={color.blue} style="light" />
       <ScrollView>
         <BackButton />
 
