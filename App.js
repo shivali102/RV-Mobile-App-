@@ -20,11 +20,11 @@ export default function App () {
       {/* <Checkemail/> */}
       {/*<ForgetPassword/>*/}
       {/* <Signup/> */}
-      {/* <Home/> */}
+      {/*<Home/>*/}
       {/* <Login/> */}
       {/* <Location/> */}
       {/* <LocationDetails/>  */}
-      <RvDetailpage/>
+       <RvDetailpage/> 
     </View>
   );
 }

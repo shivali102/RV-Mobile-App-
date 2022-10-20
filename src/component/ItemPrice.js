@@ -5,18 +5,20 @@ import color from '../theme/color';
 export default function ItemPrice({launchYear,model,price}) {
   return (
     <View style={styles.parent}>
-    <View style={styles.label}>
+      <View style={styles.label}>
         <TouchableOpacity>
-            <Text style={styles.labelText}>200 KM</Text>
+          <Text style={styles.labelText}>200 KM</Text>
         </TouchableOpacity>
-    </View>
+      </View>
       <View style={styles.header}>
         <View style={styles.detail}>
           <Text>{launchYear}</Text>
           <Text style={styles.model}>{model}</Text>
         </View>
-
-        <Text style={{ paddingBottom: 20 }}>PRICE:{price}</Text>
+        <View style={{flexDirection:'row',flexWrap:'wrap'}}>
+          <Text style={styles.priceText}>PRICE:</Text>
+          <Text style={styles.amount}>{price}</Text>
+        </View>
       </View>
     </View>
   );
@@ -42,9 +44,7 @@ const styles = StyleSheet.create({
   label: {
     backgroundColor: color.orange,
     width: "15%",
-    height: "13%",
-    position: "absolute",
-    right: 0,
+
     alignItems: "center",
     justifyContent: "center",
   },
@@ -52,4 +52,12 @@ const styles = StyleSheet.create({
     fontSize: 13,
     color: "white",
   },
+  priceText:{
+    fontWeight:'bold',
+    color:color.orange,
+    fontSize:15,
+  },
+  amount:{
+    fontWeight:"bold",
+  }
 });

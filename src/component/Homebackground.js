@@ -1,11 +1,10 @@
   import React from "react";
 import {View,Text, ImageBackground,StyleSheet,Image,StatusBar} from "react-native"
 import Searchbox from "./Searchbox"
-
+import RvHeading from "./RvHeading";
 const Homebg=()=>{
     return (
       <View>
-       
         <ImageBackground
           style={{ height: 400 }}
           source={require("../Images/bgimage.png")}
@@ -17,7 +16,7 @@ const Homebg=()=>{
               <Text style={styles.childtext2}>LIVE,A NEW WAY</Text>
               <Text style={styles.childtext2}>TO MOVE.</Text>
             </View>
-            <View style={{ position: "absolute", right: 0}}>
+            <View style={{ position: "absolute", right: 0 }}>
               <View style={{}}>
                 <Text style={styles.makes}>Makes</Text>
               </View>
@@ -27,11 +26,10 @@ const Homebg=()=>{
             </View>
           </View>
         </ImageBackground>
-        <View style={{ alignItems: "center", padding: 20 }}>
-          <Text style={{ fontWeight: "bold", color: "#0058AB" }}>
-            RV SPOTLIGHT
-          </Text>
-        </View>
+        
+         <RvHeading 
+         heading="RV SPOTLIGHT"/>
+       
         <View style={{ marginHorizontal: 10 }}>
           <ImageBackground
             style={{ height: 200, width: 340 }}
@@ -42,7 +40,7 @@ const Homebg=()=>{
           <Text style={{ alignSelf: "center", fontSize: 10 }}>
             FEATURED RVS
           </Text>
-          <Text style={styles.text2}>RECOMMENDED RVS</Text>
+          <RvHeading heading="180 RV's" />
         </View>
       </View>
     );

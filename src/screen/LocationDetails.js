@@ -4,11 +4,12 @@ import Header from '../component/Header'
 import RvContact from '../component/RvContact';
 import color from '../theme/color';
 import RvCard from '../component/RvCard';
+import RvHeading from '../component/RvHeading';
 
 export default function LocationDetails() {
   return (
     <View>
-      <StatusBar backgroundColor="#0058AB" style="light" />
+      <StatusBar backgroundColor={color.blue} style="light" />
       <ScrollView>
         <Header />
         <View>
@@ -17,10 +18,14 @@ export default function LocationDetails() {
             source={require("../Images/Deatailcardpic.png")}
           />
         </View>
-        <RvContact />
-        <View style={styles.TextView}>
-          <Text style={styles.text}>180 RV'S</Text>
-        </View>
+        <RvContact
+          scrImage={require("../Images/Deatailcardpic.png")}
+          textName="Harvey RVs"
+          textLocation="Glenburn ,ME 04401"
+        />
+        <RvHeading
+        heading ="180 RV's"/>
+       
         <View
           style={{
             flexDirection: "row",
@@ -50,18 +55,13 @@ export default function LocationDetails() {
           />
         </View>
         <View style={{ alignItems: "center" }}>
-          <View
-            style={styles.button}
-          >
+          <View style={styles.button}>
             <TouchableOpacity style={{ alignItems: "center" }}>
-              <Text
-                style={styles.ButtonText}
-              >
-                SEE MORE
-              </Text>
+              <Text style={styles.ButtonText}>SEE MORE</Text>
             </TouchableOpacity>
           </View>
         </View>
+       
       </ScrollView>
     </View>
   );
@@ -71,15 +71,8 @@ const styles = StyleSheet.create({
     width: 395,
     height: 195,
   },
-  text: {
-    fontWeight: "bold",
-    color: color.blue,
-    fontSize: 15,
-  },
-  TextView: {
-    alignSelf: "center",
-    marginVertical: 20,
-  },
+ 
+ 
   button: {
     backgroundColor: "#0058AB",
     width: 140,

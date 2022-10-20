@@ -10,7 +10,7 @@ const InfoCard=(props)=>{
             marginTop: 20,
             marginHorizontal: 0,
             width: "40%",
-            height:"40%",
+          
             marginHorizontal:15,
             marginBottom:10,
             borderRadius: 5,

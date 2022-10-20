@@ -14,17 +14,7 @@ export default function RvCard({ title, amount, scrImage }) {
   return (
     <View style={styles.parent}>
       <ImageBackground style={{ height: 100, width: "100%" }} source={scrImage}>
-        <View
-          style={{
-            position: "absolute",
-            right: 0,
-            backgroundColor: "#FF7700",
-            paddingHorizontal: 15,
-            paddingVertical: 3,
-            borderRadius: 3,
-            marginTop: 10,
-          }}
-        >
+        <View style={styles.premiumLabel}>
           <TouchableOpacity>
             <Text style={{ color: "white", fontSize: 7 }}>PREMIUM</Text>
           </TouchableOpacity>
@@ -76,8 +66,17 @@ const styles = StyleSheet.create({
     width: "47%",
     borderRadius: 10,
     borderColor: "grey",
-    marginLeft:5,
-    marginRight:5,
-    marginBottom:20,
+    marginLeft: 5,
+    marginRight: 5,
+    marginBottom: 20,
+  },
+  premiumLabel: {
+    position: "absolute",
+    right: 0,
+    backgroundColor: "#FF7700",
+    paddingHorizontal: 15,
+    paddingVertical: 3,
+    borderRadius: 3,
+    marginTop: 10,
   },
 });
