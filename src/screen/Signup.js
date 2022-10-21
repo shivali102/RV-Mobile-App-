@@ -13,28 +13,32 @@ import CustomCheckbox from "../component/CustomCheckbox";
 import BackButton from "../component/BackButton";
 import Box from "../component/Box";
 import color from "../theme/color";
+import Checkbox from "../component/Sentence";
 export default function Signup () {
   const [isChecked,setIsChecked] = useState(false)
   return (
     <View style={styles.parent}>
-    <StatusBar backgroundColor={color.blue} style="light" />
+      <StatusBar backgroundColor={color.blue} style="light" />
       <ScrollView>
         <BackButton />
 
         <Text style={styles.header}>Create an account </Text>
         <View style={{ flexDirection: "column" }}>
-          <Box placeholder="First Name" />
-
-          <Box placeholder="Last Name" />
-          <Box placeholder="Email" />
-          <Box placeholder="Password" />
-          <Box placeholder="Re-entered Password" />
-          <Box placeholder="Zip Code" />
+          <Box label="First Name" star="*" placeholder="First Name" />
+          <Box label="Last Name" star="*" placeholder="Last Name" />
+          <Box label="Email" star="*" placeholder="Email" />
+          <Box label="password" star="*" placeholder="Password" />
+          <Box
+            label="Re-entered Password"
+            star="*"
+            placeholder="Re-entered Password"
+          />
+          <Box label="Zip Code" star="*" placeholder="Zip Code" />
           <View style={{ flexDirection: "row" }}>
             <View style={{ flex: 0.7 }}>
-              <CustomCheckbox 
-              valueCheck={isChecked}
-              functionCheck={setIsChecked}
+              <CustomCheckbox
+                valueCheck={isChecked}
+                functionCheck={setIsChecked}
               />
             </View>
             <View style={{ flex: 6 }}>

@@ -5,6 +5,7 @@ import Email from '../component/Email';
 import { FontAwesome } from "@expo/vector-icons";
 import { Entypo } from "@expo/vector-icons";
 import color from '../theme/color';
+import BlueButton from '../component/BlueButton';
 
 
 const Login=()=>
@@ -69,11 +70,10 @@ const Login=()=>
             <Text style={{ color: "grey" }}>Forgot Password?</Text>
           </View>
         </View>
-        <View style={styles.button}>
-          <TouchableOpacity>
-            <Text style={{ color: "white" }}>LOGIN</Text>
-          </TouchableOpacity>
-        </View>
+        <BlueButton
+          buttonName="Login"
+        />
+      
         <View
           style={{
             flexDirection: "row",
@@ -136,14 +136,7 @@ const styles = StyleSheet.create({
     paddingLeft: 10,
 
   },
-  button: {
-    marginTop: 220,
-    alignItems: "center",
-
-    padding: 10,
-    borderRadius: 10,
-    backgroundColor: "#0058AB",
-  },
+ 
   dealer: {
 
 

@@ -1,25 +1,28 @@
-import React from "react";
-import { Text, View, StyleSheet, TextInput } from "react-native";
-const Box = (props) => {
-  const { placeholder } = props;
+import { View, Text,StyleSheet,TextInput } from 'react-native'
+import React from 'react'
+
+export default function Box({label,star,...props}) {
   return (
-    <View style={styles.TextStyle}>
-      <TextInput
-        style={{ paddingLeft: 10}}
-        placeholder={placeholder}
-      />
+    <View>
+      <Text style={{ color: "grey" }}>
+        <Text >{label}</Text>
+        <Text style={{color:'red'}}>{star}</Text>
+      </Text>
+      <View style={styles.TextStyle}>
+        <TextInput style={{ paddingHorizontal: 10 }} {...props} />
+      </View>
     </View>
   );
-};
+}
 const styles = StyleSheet.create({
   TextStyle: {
     paddingVertical: 4,
     borderWidth: 1,
     borderColor: "#a9a9a9",
-    borderRadius: 8,
-    marginBottom: 20,
+    borderRadius: 5,
+    marginBottom: 10,
     height: 40,
 
   },
 });
-export default Box;
+

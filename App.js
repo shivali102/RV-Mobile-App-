@@ -9,6 +9,7 @@ import Home from "./src/screen/Home";
 import Location from './src/screen/Location';
 import LocationDetails from './src/screen/LocationDetails';
 import RvDetailpage from './src/screen/RvDetailpage';
+import SendEmail from './src/screen/SendEmail';
 
 
 export default function App () {
@@ -19,12 +20,13 @@ export default function App () {
     <View>
       {/* <Checkemail/> */}
       {/*<ForgetPassword/>*/}
-      {/* <Signup/> */}
+         {/* <Signup/>     */}
       {/*<Home/>*/}
-      {/* <Login/> */}
+      {/* <Login/>  */}
       {/* <Location/> */}
       {/* <LocationDetails/>  */}
-       <RvDetailpage/> 
+       {/* <RvDetailpage/>  */}
+         <SendEmail/>   
     </View>
   );
 }
