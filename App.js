@@ -10,6 +10,7 @@ import Location from './src/screen/Location';
 import LocationDetails from './src/screen/LocationDetails';
 import RvDetailpage from './src/screen/RvDetailpage';
 import SendEmail from './src/screen/SendEmail';
+import Filter from './src/component/Filter';
 
 
 export default function App () {
@@ -26,7 +27,8 @@ export default function App () {
       {/* <Location/> */}
       {/* <LocationDetails/>  */}
        {/* <RvDetailpage/>  */}
-         <SendEmail/>   
+       <Filter/>
+         {/* <SendEmail/>   */}
     </View>
   );
 }

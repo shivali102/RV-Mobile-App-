@@ -14,7 +14,7 @@ export default function BlueButton({buttonName}) {
 }
 const styles = StyleSheet.create({
   button: {
-    marginTop: 220,
+    
     alignItems: "center",
 
     padding: 10,

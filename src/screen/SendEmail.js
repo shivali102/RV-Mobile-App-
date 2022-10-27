@@ -22,8 +22,14 @@ export default function SendEmail() {
           <Box label="Last Name" star="*" placeholder="Enter Last Name" />
           <Box label="Email" star="*" placeholder="Enter Email" />
           <Box label="Phone" star="*" placeholder="Enter phone number" />
+          <Box  label="Message" 
+          multiline ={true}
+          numberOfLines={5}
+          textAlignVertical={"top"}
+          placeholder="Enter messages" />
         </View>
-        <View style={{ flexDirection: "row" }}>
+        <View style={{paddingTop:110}}>
+        <View style={{ flexDirection: "row",marginLeft:15,paddingBottom:10}}>
           <View style={{ flex: 0.7 }}>
             <CustomCheckbox
               valueCheck={isChecked}
@@ -36,6 +42,7 @@ export default function SendEmail() {
         </View>
         <View style={{marginHorizontal:10}}>
           <BlueButton buttonName="SEND" />
+        </View>
         </View>
       </ScrollView>
     </View>
