@@ -9,7 +9,7 @@ export default function Filter() {
       <Text>FILTER</Text>
       </View>
       <View>
-      <Image  style={{width:30,height:30}}source={require("../Images/filterimage.png")}/>
+      <Image  style={{width:20,height:20}}source={require("../Images/filterimage.png")}/>
       </View>
     </View>
   )
@@ -17,9 +17,10 @@ export default function Filter() {
 const styles=StyleSheet.create({
   parent:{
     flexDirection:'row',
-    justifyContent:'center',
+    justifyContent:"space-between",
     borderWidth:1,
-    width:100
+    width:100,
+    paddingHorizontal:20
   }
 
 })

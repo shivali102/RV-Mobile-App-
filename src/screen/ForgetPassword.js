@@ -3,7 +3,7 @@ import {View,Text,Image,StyleSheet, ScrollView, TouchableOpacity,StatusBar} from
 import color from '../theme/color'
 import Email from '../component/Email'
 import BackButton from '../component/BackButton'
-
+import BlueButton from '../component/BlueButton';
 
 const ForgetPassword=()=>{
     return (
@@ -31,10 +31,8 @@ const ForgetPassword=()=>{
             Forgotten Password?
           </Text>
           <Email />
-          <View>
-            <TouchableOpacity style={styles.Button}>
-              <Text style={{ color: "white" }}>SEND</Text>
-            </TouchableOpacity>
+          <View style={styles.Button}>
+            <BlueButton buttonName="SEND" />
           </View>
         </ScrollView>
       </View>
@@ -53,14 +51,14 @@ const styles = StyleSheet.create({
     backgroundColor: "white",
   },
   Button: {
-    marginTop: 30,
-    alignItems: "center",
-    backgroundColor: "#0058AB",
+    //marginTop: 30,
+    //alignItems: "center",
+    //backgroundColor: "#0058AB",
   
-    padding: 10,
-    marginHorizontal: 30,
-    borderRadius: 10,
-    height: 45,
+    padding: 30,
+
+    //borderRadius: 10,
+    //height: 45,
   },
 });
 export default ForgetPassword;

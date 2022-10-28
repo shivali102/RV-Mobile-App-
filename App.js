@@ -27,8 +27,8 @@ export default function App () {
       {/* <Location/> */}
       {/* <LocationDetails/>  */}
        {/* <RvDetailpage/>  */}
-       <Filter/>
-         {/* <SendEmail/>   */}
+       {/* <Filter/> */}
+         <SendEmail/>   
     </View>
   );
 }

@@ -4,7 +4,7 @@ import {
   Text,
   View,
   StyleSheet,
- Image,
+  Image,
   ScrollView,
   Button,
   TouchableOpacity,
@@ -13,6 +13,7 @@ import {
 
 import BackButton from "../component/BackButton";
 import color from "../theme/color";
+import BlueButton from "../component/BlueButton";
 
 
 const Checkemail=()=>{
@@ -37,9 +38,7 @@ const Checkemail=()=>{
           </Text>
         </View>
         <View style={styles.button}>
-          <TouchableOpacity>
-            <Text style={{ color: "white" }}>OKAY</Text>
-          </TouchableOpacity>
+          <BlueButton buttonName="OKAY" />
         </View>
       </View>
     );
@@ -58,22 +57,17 @@ const styles = StyleSheet.create({
     fontSize: 20,
     marginTop: 30,
     fontWeight: "bold",
-    marginBottom:8,
-   
+    marginBottom: 8,
   },
-  text2:{
-    marginHorizontal:10,
-    textAlign:'center',
-    
+  text2: {
+    marginHorizontal: 10,
+    textAlign: "center",
   },
-  button:{
-    alignItems:'center',
-    marginTop:30,
-    
-    borderRadius:10,
-    marginHorizontal:30,
-    padding:10,
-    backgroundColor:'#0058AB'
-  }
+   button:{
+  
+   marginHorizontal: 10,
+  padding: 20,
+  
+   },
 });
 export default  Checkemail;
