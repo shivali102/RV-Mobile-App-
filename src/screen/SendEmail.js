@@ -1,16 +1,34 @@
-import { View, Text,StatusBar,StyleSheet, TextInput, ScrollView } from 'react-native'
+import {
+  View,
+  Text,
+  StatusBar,
+  StyleSheet,
+  TextInput,
+  ScrollView,
+  Button,
+  visible,
+  Image,
+} from "react-native";
 import React, { useState } from "react";
-import color from '../theme/color';
-import Header from '../component/Header';
-import Box from '../component/Box';
+import color from "../theme/color";
+import Header from "../component/Header";
+import Box from "../component/Box";
 import CustomCheckbox from "../component/CustomCheckbox";
-import BlueButton from '../component/BlueButton';
+import BlueButton from "../component/BlueButton";
 
-import { Alert, Modal,   Pressable } from "react-native";
+import Modal from "react-native";
+const ModelPoup = ({ visible, children }) => {
+  const [showModal, setShowModel] = React.useState(visible);
+  return;
+  <Modal transparent visible={true}>
+    <View style={styles.modelBackground}></View>
+    <View style={[styles.modelContainer]}>{children}</View>
+  </Modal>;
+};
 
 export default function SendEmail() {
-    const [isChecked, setIsChecked] = useState(false);
-   const [modalVisible, setModalVisible] = useState(false);
+  const [isChecked, setIsChecked] = useState(false);
+  const [Visible, setVisible] = React.useState(false);
   return (
     <View style={styles.parent}>
       <StatusBar backgroundColor={color.blue} style="light" />
@@ -46,36 +64,16 @@ export default function SendEmail() {
               <Text>Subscribe to Newsletter</Text>
             </View>
           </View>
-          <View style={{ marginHorizontal: 10 }}>
-            <Pressable>
-              <BlueButton
-                buttonName="SEND"
-                onPress={() => setModalVisible(true)}
-              />
-            </Pressable>
-            <View style={styles.centeredView}>
-              <Modal
-                animationType="slide"
-                transparent={true}
-                visible={modalVisible}
-                onRequestClose={() => {
-                  Alert.alert("Modal has been closed.");
-                  setModalVisible(!modalVisible);
-                }}
-              >
-                <View style={styles.centeredView}>
-                  <View style={styles.modalView}>
-                    <Text style={styles.modalText}>Hello World!</Text>
-                    <Pressable
-                      style={[styles.button, styles.buttonClose]}
-                      onPress={() => setModalVisible(!modalVisible)}
-                    >
-                      <Text style={styles.textStyle}>Hide Modal</Text>
-                    </Pressable>
-                  </View>
+          <View style={{  marginHorizontal: 10 }}>
+            <ModelPoup visible={visible}>
+              <View style={{alignItems:'center'}}>
+                <View style={styles.header}>
+                <Image source={require("../Images/modelcross.png")}/>
+
                 </View>
-              </Modal>
-            </View>
+              </View>
+            </ModelPoup>
+            <Button title="SEND" onPress={() => setVisible(true)} />
           </View>
         </View>
       </ScrollView>
@@ -103,11 +101,11 @@ const styles = StyleSheet.create({
   footer: {
     paddingTop: 10,
   },
-    centeredView: {
+  centeredView: {
     flex: 1,
     justifyContent: "center",
     alignItems: "center",
-    marginTop: 22
+    marginTop: 22,
   },
   modalView: {
     margin: 20,
@@ -118,16 +116,13 @@ const styles = StyleSheet.create({
     shadowColor: "#000",
     shadowOffset: {
       width: 0,
-      height: 2
+      height: 2,
     },
-    shadowOpacity: 0.25,
-    shadowRadius: 4,
-    elevation: 5
   },
   button: {
     borderRadius: 20,
     padding: 10,
-    elevation: 2
+    elevation: 2,
   },
   buttonOpen: {
     backgroundColor: "#F194FF",
@@ -135,13 +130,19 @@ const styles = StyleSheet.create({
   buttonClose: {
     backgroundColor: "#2196F3",
   },
-  textStyle: {
-    color: "white",
-    fontWeight: "bold",
-    textAlign: "center"
+
+  modelBackground: {
+    flex: 1,
+    backgroundColor: "red",
+    justifyContent: "center",
+    alignItems: "center",
   },
-  modalText: {
-    marginBottom: 15,
-    textAlign: "center"
+  modelContainer:{
+    width:'80%',
+    backgroundColor:'white',
+    paddingHorizontal:20,
+    paddingVertical:30,
+    borderRadius:20,
+    elevation:20,
   }
 });
