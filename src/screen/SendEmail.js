@@ -8,6 +8,9 @@ import {
   Button,
   visible,
   Image,
+  Modal,
+  TouchableOpacity,
+  Animated,
 } from "react-native";
 import React, { useState } from "react";
 import color from "../theme/color";
@@ -16,20 +19,54 @@ import Box from "../component/Box";
 import CustomCheckbox from "../component/CustomCheckbox";
 import BlueButton from "../component/BlueButton";
 
-import Modal from "react-native";
-const ModalPoup = ({ visible, children }) => {
-  const [showModal, setShowModal] = React.useState(visible);
-  return (
-  <Modal transparent visible={true}>
-    <View style={styles.modelBackground}></View>
-    <View style={[styles.modelContainer]}>{children}</View>
-  </Modal>
-  );
-};
+// const ModelPoup = ({ visible, children }) => {
+
+// const scaleValue = React.useRef(new Animated.Value(0)).current;
+//   toggleModel();
+// // },[visible]
+//  React.useEffect(()=>{
+//   );
+{
+  /*const toggleModel=()=>{
+    // if(visible){
+      setShowModel(true);
+      Animated.spring(scaleValue,{
+        toValue:1,
+        duration:300,
+        useNativeDriver:true,
+      }).start();
+    }
+    else{
+
+      setTimeout(() => setShowModel(false) ,200);
+      Animated.timing(scaleValue,{
+      toValue:0,
+      duration:300,
+      useNativeDriver:true,
+    
+    }).start();
+  }
+  };*/
+}
+//   return(
+
+//    <Modal
+//    transparent
+//    visible={showModal}
+//    animationType="fade"
+//    onRequestClose={()=>setShowModal(false)}
+//    >
+
+//     <View style={styles.modalBackground}></View>
+//     <Animated.View style={[styles.modalContainer ,{transform:[{scale: scaleValue}]}]}>{children}</Animated.View>
+//   </Modal>
+//   )
+// };
 
 export default function SendEmail() {
+  const [showModal, setShowModal] = useState(false);
   const [isChecked, setIsChecked] = useState(false);
-  const [Visible, setVisible] = React.useState(false);
+  //   const [Visible, setVisible] = React.useState(false);
   return (
     <View style={styles.parent}>
       <StatusBar backgroundColor={color.blue} style="light" />
@@ -65,16 +102,49 @@ export default function SendEmail() {
               <Text>Subscribe to Newsletter</Text>
             </View>
           </View>
-          <View style={{  marginHorizontal: 10 }}>
-            <ModalPoup visible={visible}>
-              <View style={{alignItems:'center'}}>
-                <View style={styles.header}>
-                <Image source={require("../Images/modelcross.png")}/>
+          <View style={{ marginHorizontal: 10 }}>
+            <Modal
+              transparent
+              visible={showModal}
+              animationType="fade"
+              onRequestClose={() => setShowModal(false)}
+            >
+              <View style={styles.modalContainer}>
+                <View
+                  style={{
+                    justifyContent: "center",
+                    alignItems: "center",
+                  }}
+                >
+                  <View style={styles.header}>
+                    <TouchableOpacity onPress={() => setShowModal(!showModal)}>
+                      <Image
+                        source={require("../Images/modelcross.png")}
+                        style={{ width: 30, height: 30 }}
+                      />
+                    </TouchableOpacity>
+                  </View>
 
+                  <View style={{ alignItems: "center" }}>
+                    <Image
+                      source={require("../Images/modeltick.png")}
+                      style={{ width: 150, height: 150, marginVertical: 10 }}
+                    />
+                  </View>
+                  <Text
+                    style={{
+                      marginVertical: 30,
+                      fontSize: 20,
+                      textAlign: "center",
+                    }}
+                  >
+                    Your message was sent
+                  </Text>
                 </View>
               </View>
-            </ModalPoup>
-            <Button title="SEND" onPress={() => setVisible(true)} />
+            </Modal>
+
+            <Button title="SEND" onPress={() => setShowModal(!showModal)} />
           </View>
         </View>
       </ScrollView>
@@ -102,48 +172,34 @@ const styles = StyleSheet.create({
   footer: {
     paddingTop: 10,
   },
-  centeredView: {
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    marginTop: 22,
-  },
-  modalView: {
-    margin: 20,
-    backgroundColor: "white",
-    borderRadius: 20,
-    padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
-    shadowOffset: {
-      width: 0,
-      height: 2,
-    },
-  },
+
   button: {
     borderRadius: 20,
     padding: 10,
     elevation: 2,
   },
-  buttonOpen: {
-    backgroundColor: "#F194FF",
-  },
-  buttonClose: {
-    backgroundColor: "#2196F3",
-  },
 
-  modelBackground: {
-    flex: 1,
+  modalBackground: {
+    flex:1,
     backgroundColor: "rgba(0,0,0,0.5)",
     justifyContent: "center",
-    alignItems: "center",
+    alignItems:'center',
   },
-  modelContainer:{
-    width:'80%',
-    backgroundColor:'white',
-    paddingHorizontal:20,
-    paddingVertical:30,
-    borderRadius:20,
-    elevation:20,
-  }
+  modalContainer: {
+    
+    width: "80%",
+    backgroundColor: "white",
+    paddingHorizontal: 20,
+    alignSelf: "center",
+    borderRadius: 20,
+    elevation: 20,
+    
+
+  },
+  header: {
+    width: "100%",
+    height: 40,
+    alignItems: "flex-end",
+    justifyContent: "center",
+  },
 });
