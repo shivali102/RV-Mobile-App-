@@ -19,7 +19,7 @@ export default function App () {
   }, []);
   return (
     <View>
-      {/* <Checkemail/> */}
+      {/* <Checkemail/>  */}
       {/*<ForgetPassword/>*/}
          {/* <Signup/>     */}
       {/*<Home/>*/}
@@ -28,7 +28,7 @@ export default function App () {
       {/* <LocationDetails/>  */}
        {/* <RvDetailpage/>  */}
        {/* <Filter/> */}
-         <SendEmail/>   
+          <SendEmail/>    
     </View>
   );
 }

@@ -17,13 +17,14 @@ import CustomCheckbox from "../component/CustomCheckbox";
 import BlueButton from "../component/BlueButton";
 
 import Modal from "react-native";
-const ModelPoup = ({ visible, children }) => {
-  const [showModal, setShowModel] = React.useState(visible);
-  return;
+const ModalPoup = ({ visible, children }) => {
+  const [showModal, setShowModal] = React.useState(visible);
+  return (
   <Modal transparent visible={true}>
     <View style={styles.modelBackground}></View>
     <View style={[styles.modelContainer]}>{children}</View>
-  </Modal>;
+  </Modal>
+  );
 };
 
 export default function SendEmail() {
@@ -65,14 +66,14 @@ export default function SendEmail() {
             </View>
           </View>
           <View style={{  marginHorizontal: 10 }}>
-            <ModelPoup visible={visible}>
+            <ModalPoup visible={visible}>
               <View style={{alignItems:'center'}}>
                 <View style={styles.header}>
                 <Image source={require("../Images/modelcross.png")}/>
 
                 </View>
               </View>
-            </ModelPoup>
+            </ModalPoup>
             <Button title="SEND" onPress={() => setVisible(true)} />
           </View>
         </View>
@@ -133,7 +134,7 @@ const styles = StyleSheet.create({
 
   modelBackground: {
     flex: 1,
-    backgroundColor: "red",
+    backgroundColor: "rgba(0,0,0,0.5)",
     justifyContent: "center",
     alignItems: "center",
   },
