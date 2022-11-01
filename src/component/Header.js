@@ -14,7 +14,7 @@ const header=()=>
                 <Image style={styles.image} source={require("../Images/RVDC.png")}/>
             </View>
              <View>
-            <Ionicons name="ios-notifications" size={32} color="#0058AB" />
+            <Ionicons name="ios-notifications" size={28} color="#0058AB" />
             </View>
         </View>
     )
@@ -23,12 +23,15 @@ const styles=StyleSheet.create({
     headerstyle:{
         flexDirection:'row',
         justifyContent:'space-between',
-        marginHorizontal:20,
+        marginHorizontal:10,
         alignItems:'center',
-        marginTop:10,
-        height:50
-       
-        
+      paddingVertical:15,
+        height:70,
+      shadowOpacity:0.9,
+      shadowColor:'black',
+      shadowOffset:{width:0,height:5},
+      shadowRadius:6,
+    
     },
     image:{
         width:83,

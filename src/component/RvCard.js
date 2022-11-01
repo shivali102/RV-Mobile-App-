@@ -24,17 +24,16 @@ export default function RvCard({ title, amount, scrImage }) {
       <View
         style={{
           borderWidth: 1,
-          borderColor: "grey",
+     
           borderRadius: 12.5,
           height: 25,
           width: 25,
-          backgroundColor: "white",
+          backgroundColor: "#FFFFFF",
           justifyContent: "center",
           marginLeft: 10,
           position: "absolute",
           bottom: 35,
           borderColor: "#FF7700",
-          shadowColor: "#000000",
         }}
       >
         <View style={{ alignItems: "center" }}>
@@ -52,9 +51,7 @@ export default function RvCard({ title, amount, scrImage }) {
         <View style={{ flex: 5 }}>
           <Text>{title}</Text>
         </View>
-        <View style={{}}>
-          <Text>{amount}</Text>
-        </View>
+        <Text>{amount}</Text>
       </View>
     </View>
   );
@@ -69,6 +66,7 @@ const styles = StyleSheet.create({
     marginLeft: 5,
     marginRight: 5,
     marginBottom: 20,
+    borderColor: "rgba(158, 150, 150, .6)",
   },
   premiumLabel: {
     position: "absolute",

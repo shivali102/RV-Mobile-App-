@@ -13,11 +13,11 @@ import {
   Animated,
 } from "react-native";
 import React, { useState } from "react";
-import color from "../theme/color";
-import Header from "../component/Header";
-import Box from "../component/Box";
-import CustomCheckbox from "../component/CustomCheckbox";
 import BlueButton from "../component/BlueButton";
+import color from "../theme/color";
+import Box from "../component/Box";
+import Header from "../component/Header";
+import CustomCheckbox from "../component/CustomCheckbox";
 
 // const ModelPoup = ({ visible, children }) => {
 
