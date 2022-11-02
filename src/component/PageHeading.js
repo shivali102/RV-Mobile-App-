@@ -3,12 +3,12 @@ import React from 'react'
 import RvHeading from './RvHeading';
 import color from '../theme/color';
 
-export default function PageHeading({heading,number}) {
+export default function PageHeading({heading,count}) {
   return (
     <View>
-      <Text>
+      <Text style={styles.heading}>
         <Text style={styles.text}>{heading}</Text>
-        <Text>{number}</Text>
+        <Text>({count})</Text>
       </Text>
     </View>
   );
@@ -21,4 +21,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     
   },
+  heading:{
+    marginLeft:15,
+  }
 });
