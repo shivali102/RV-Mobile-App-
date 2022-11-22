@@ -20,14 +20,25 @@ export default function SellRvListing() {
 
           <Searchbox />
         </View>
-        <View style={styles.headingView}>
-          <Text style={styles.heading}>SELECT AND PLANS</Text>
-          <Text style={styles.Subheading}>Select a photo package plan </Text>
-        </View>
+        <PageSubHeading
+        heading="SELECT AND PLAN"
+        Subheading="Select a photo package plan"
+        
+        />
         <View>
-          <WhiteBox />
-          <WhiteBox />
-          <WhiteBox />
+          <WhiteBox 
+       PlanName="Basic"
+       PlanPhotoes="4 photos/2 weeks"
+       oldprice="$78.95"
+        originalprice="$69.95"/>
+          <WhiteBox   PlanName="Enhanced"
+       PlanPhotoes="20 photos/8 weeks"
+       oldprice="$178.95"
+        originalprice="$134.95"/>
+          <WhiteBox PlanName="Best"
+       PlanPhotoes="50 photos/1 year"
+       oldprice="$178.95"
+        originalprice="$134.95"/>
         </View>
         <View style={{marginHorizontal:10}}>
           <BlueButton buttonName="CONTINUE" />

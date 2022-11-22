@@ -14,7 +14,7 @@ import Filter from './src/component/Filter';
 import FavouriteListing from './src/screen/FavouriteListing';
 import ListingDetailPage from './src/screen/ListingDetailPage';
 import SellRvListing from './src/screen/SellRvListing';
-
+import SellRvdetailpage from "./src/screen/SellRvdetailpage"
 export default function App () {
   useEffect(()=> {
     useFonts();
@@ -33,7 +33,8 @@ export default function App () {
       {/* <SendEmail/>     */}
       {/* <FavouriteListing /> */}
       {/* <ListingDetailPage/> */}
-      <SellRvListing/>
+      {/* <SellRvListing/> */}
+      <SellRvdetailpage/>
     </View>
   );
 }
