@@ -15,6 +15,10 @@ import FavouriteListing from './src/screen/FavouriteListing';
 import ListingDetailPage from './src/screen/ListingDetailPage';
 import SellRvListing from './src/screen/SellRvListing';
 import SellRvdetailpage from "./src/screen/SellRvdetailpage"
+import ResourceDetail from "./src/screen/ResourceDetail"
+import Resource from './src/screen/Resource';
+import LoanCalculator from './src/screen/LoanCalculator';
+import Advertising from './src/screen/Advertising';
 export default function App () {
   useEffect(()=> {
     useFonts();
@@ -34,7 +38,11 @@ export default function App () {
       {/* <FavouriteListing /> */}
       {/* <ListingDetailPage/> */}
       {/* <SellRvListing/> */}
-      <SellRvdetailpage/>
+      {/* <SellRvdetailpage/> */}
+      {/* <ResourceDetail/> */}
+      {/* <LoanCalculator/> */}
+       <Resource/> 
+      {/* <Advertising/> */}
     </View>
   );
 }

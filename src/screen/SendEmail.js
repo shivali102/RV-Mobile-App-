@@ -18,50 +18,8 @@ import color from "../theme/color";
 import Box from "../component/Box";
 import Header from "../component/Header";
 import CustomCheckbox from "../component/CustomCheckbox";
+import OrangeHeading from "../component/OrangeHeading";
 
-// const ModelPoup = ({ visible, children }) => {
-
-// const scaleValue = React.useRef(new Animated.Value(0)).current;
-//   toggleModel();
-// // },[visible]
-//  React.useEffect(()=>{
-//   );
-{
-  /*const toggleModel=()=>{
-    // if(visible){
-      setShowModel(true);
-      Animated.spring(scaleValue,{
-        toValue:1,
-        duration:300,
-        useNativeDriver:true,
-      }).start();
-    }
-    else{
-
-      setTimeout(() => setShowModel(false) ,200);
-      Animated.timing(scaleValue,{
-      toValue:0,
-      duration:300,
-      useNativeDriver:true,
-    
-    }).start();
-  }
-  };*/
-}
-//   return(
-
-//    <Modal
-//    transparent
-//    visible={showModal}
-//    animationType="fade"
-//    onRequestClose={()=>setShowModal(false)}
-//    >
-
-//     <View style={styles.modalBackground}></View>
-//     <Animated.View style={[styles.modalContainer ,{transform:[{scale: scaleValue}]}]}>{children}</Animated.View>
-//   </Modal>
-//   )
-// };
 
 export default function SendEmail() {
   const [showModal, setShowModal] = useState(false);
@@ -72,10 +30,9 @@ export default function SendEmail() {
       <StatusBar backgroundColor={color.blue} style="light" />
       <ScrollView>
         <Header />
-        <View style={styles.Heading}>
-          <Text style={styles.text}>Send Email To Dealer</Text>
-        </View>
-        <View style={{ marginTop: 10, paddingHorizontal: 15 }}>
+        <OrangeHeading
+        headingText="Send Email to Dealer"/>
+        <View style={styles.BoxView}>
           <Box label="First Name" star="*" placeholder="Enter  first Name" />
           <Box label="Last Name" star="*" placeholder="Enter Last Name" />
           <Box label="Email" star="*" placeholder="Enter email" />
@@ -152,19 +109,12 @@ export default function SendEmail() {
   );
 }
 const styles = StyleSheet.create({
-  Heading: {
-    backgroundColor: color.orange,
-    padding: 10,
-  },
-  text: {
-    color: "white",
-  },
   innerView: {
     borderWidth: 1,
     borderRadius: 6,
     padding: 10,
   },
-  parent: {},
+ 
   outerView: {
     marginTop: 20,
     marginHorizontal: 10,
@@ -202,4 +152,7 @@ const styles = StyleSheet.create({
     alignItems: "flex-end",
     justifyContent: "center",
   },
+  BoxView:{
+    marginTop: 10, paddingHorizontal: 15
+  }
 });
