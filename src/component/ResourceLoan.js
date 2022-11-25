@@ -1,7 +1,6 @@
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
 import React from 'react'
 import color from '../theme/color'
-import { Colors } from 'react-native/Libraries/NewAppScreen'
 
 export default function ResourceLoan({ResourceHeading,ButtonName}) {
   return (
@@ -23,14 +22,7 @@ export default function ResourceLoan({ResourceHeading,ButtonName}) {
   )
 }
 const styles=StyleSheet.create({
-    ButtonView:{
-        borderRadius:4,       
-        backgroundColor:color.orange,
-        marginHorizontal:110,
-        padding:6,
-        
-
-    },
+   
     text:{
         fontWeight:'bold',
         color:color.blue,
@@ -54,8 +46,8 @@ const styles=StyleSheet.create({
         paddingVertical:10,
         marginVertical:10,
     },
-    ButtonoOuterView:{
+   ButtonoOuterView:{
       
         paddingVertical:20,
-    }
+    } 
 })

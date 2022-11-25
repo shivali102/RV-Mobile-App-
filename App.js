@@ -41,8 +41,8 @@ export default function App () {
       {/* <SellRvdetailpage/> */}
       {/* <ResourceDetail/> */}
       {/* <LoanCalculator/> */}
-      {/* <Resource/> */}
-      <Advertising/>
+       <Resource/> 
+      {/* <Advertising/> */}
     </View>
   );
 }
