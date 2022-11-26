@@ -64,7 +64,7 @@ const styles=StyleSheet.create({
         paddingBottom:10,
     },
     PaymentView:{
-        backgroundColor:'#FF7700',
+        backgroundColor:'#B26E34',
         flexDirection:'row',
         justifyContent:'space-between',
         marginHorizontal:10,

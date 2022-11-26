@@ -15,7 +15,7 @@ export default function RvAds({Heading,RvAds}) {
             <Text style={styles.adstext}>{RvAds}</Text>
             </View>
     <View style={styles.BothButtonStyle}>
-    <SmallButton ButtonName="RV Dealers"/>
+    <SmallButton   ButtonName="RV Dealers"/>
     <SmallButton ButtonName="PRIVATE SELLERS"/>
     </View>
 
@@ -72,5 +72,6 @@ BothButtonStyle:{
 ButtonoOuterView:{
       
  
-} 
+} ,
+
 })

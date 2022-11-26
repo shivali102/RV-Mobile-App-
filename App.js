@@ -19,6 +19,8 @@ import ResourceDetail from "./src/screen/ResourceDetail"
 import Resource from './src/screen/Resource';
 import LoanCalculator from './src/screen/LoanCalculator';
 import Advertising from './src/screen/Advertising';
+// import { ADVERTISING } from './src/component/String';
+import PaymentMethod from './src/screen/PaymentMethod';
 export default function App () {
   useEffect(()=> {
     useFonts();
@@ -41,8 +43,9 @@ export default function App () {
       {/* <SellRvdetailpage/> */}
       {/* <ResourceDetail/> */}
       {/* <LoanCalculator/> */}
-       <Resource/> 
-      {/* <Advertising/> */}
+      {/* <Resource /> */}
+      <Advertising/>
+      {/* <PaymentMethod/> */}
     </View>
   );
 }

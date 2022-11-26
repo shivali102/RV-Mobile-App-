@@ -1,16 +1,23 @@
 import { View, Text, StyleSheet, TouchableOpacity } from "react-native";
-import React from "react";
+import React, { useState } from "react";
 import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
 import color from "../theme/color";
 export default function SmallButton({ ButtonName }) {
+
+  const [bgColor,setBgColor] = useState("orange")
+
   return (
     <TouchableOpacity>
       <View style={styles.ButtonoOuterView}>
-        <View style={styles.ButtonView}>
-          <Text style={styles.ButtonText}>{ButtonName}</Text>
+        <View style={[styles.ButtonView,{backgroundColor:'grey'}]}>
+          {bgColor == "orange" ? (
+            <Text style={styles.ButtonText}>{ButtonName}</Text>
+          ) : (
+            <Text style={styles.ButtonText}>{ButtonName}</Text>
+          )}
         </View>
       </View>
     </TouchableOpacity>
